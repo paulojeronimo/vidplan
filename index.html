@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Release Schedule Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Video Release Schedule Planner</h1>
+
+    <div class="input-section">
+      <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" />
+      </div>
+      <div>
+        <label for="numWeeks">Number of Weeks:</label>
+        <input type="number" id="numWeeks" value="6" min="1" />
+      </div>
+      <div>
+        <label for="videoInterval">Video Release Interval (1-7 days):</label>
+        <input type="number" id="videoInterval" value="3" min="1" max="7" />
+      </div>
+      <div class="skip-days-section">
+        <p>Skip video releases on:</p>
+        <div class="skip-days-checkboxes">
+          <div>
+            <input type="checkbox" id="skipMonday" />
+            <label for="skipMonday">Mon</label>
+          </div>
+          <div>
+            <input type="checkbox" id="skipTuesday" />
+            <label for="skipTuesday">Tue</label>
+          </div>
+          <div>
+            <input type="checkbox" id="skipWednesday" />
+            <label for="skipWednesday">Wed</label>
+          </div>
+          <div>
+            <input type="checkbox" id="skipThursday" />
+            <label for="skipThursday">Thu</label>
+          </div>
+          <div>
+            <input type="checkbox" id="skipFriday" />
+            <label for="skipFriday">Fri</label>
+          </div>
+          <div>
+            <input type="checkbox" id="skipSaturday" />
+            <label for="skipSaturday">Sat</label>
+          </div>
+          <div>
+            <input type="checkbox" id="skipSunday" checked />
+            <label for="skipSunday">Sun</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="separator" />
+
+    <div id="videoReleaseInfo" class="video-release-info"></div>
+
+    <div id="calendarContainer"></div>
+
+    <script src="calendar.js"></script>
+  </body>
+</html>
